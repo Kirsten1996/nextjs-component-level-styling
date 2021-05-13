@@ -1,0 +1,21 @@
+import React from 'react';
+import { mount } from 'enzyme';
+import { MemoryRouter } from 'react-router';
+import {{ properCase name }} from './';
+import data from './__mocks__/{{ camelCase name }}Data';
+
+it('renders', () => {
+  mount(
+    <MemoryRouter>
+      <{{ properCase name }} />
+    </MemoryRouter>
+  );
+});
+
+it('renders with content', () => {
+  mount(
+    <MemoryRouter>
+      <{{ properCase name }} {...data} />
+    </MemoryRouter>
+  );
+});

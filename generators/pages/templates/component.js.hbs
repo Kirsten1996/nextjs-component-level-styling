@@ -1,0 +1,50 @@
+import React from 'react';
+//import PropTypes from 'prop-types';
+{{#if wantHeaders}}
+import Helmet from 'react-helmet';
+{{/if}}
+{{#if wantGraph}}
+import { graphql } from 'react-apollo'
+{{/if}}
+
+{{#if wantStyling}}
+import './{{properCase name }}.scss';
+{{/if}}
+
+class {{ properCase name }} extends React.Component { // eslint-disable-line react/prefer-stateless-function
+
+    render() {
+        return (
+            {{#if wantStyling}}
+              <div className="{{properCase name}}">
+            {{else}}
+              <div>
+            {{/if}}
+                { /* want headers */ }
+                {{#if wantHeaders}}
+                <Helmet
+                    title="{{properCase name}}"
+                    meta={{curly true}}[
+                    {{curly true}} name: 'description', content: 'Description of {{properCase name}}' {{curly}},
+                    ]{{curly}}
+                />
+                {{/if}}
+
+            </div>
+        );
+    }
+}
+
+/*
+{{ properCase name }}.propTypes = {
+
+};
+*/
+
+{{#if wantGraph}}
+//graphql(QueryName)
+{{/if}}
+{{#if wantRouting}}
+//withRouter
+{{/if}}
+export default {{ properCase name }}

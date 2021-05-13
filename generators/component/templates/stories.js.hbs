@@ -1,0 +1,14 @@
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import { storiesOf } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs';
+import {{ properCase name }} from './';
+import data from './__mocks__/{{ camelCase name }}Data';
+
+import info from './README.md';
+
+storiesOf('Styleguide/{{design }}/{{ properCase name }}', module)
+  .addDecorator(withKnobs)
+  .add('_notes', () => <ReactMarkdown source={info} escapeHtml={false} />)
+  .add('<dynamic>', () => <{{ properCase name }} />)
+  .add('default', () => <{{ properCase name }} {...data} />);

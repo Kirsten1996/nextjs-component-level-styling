@@ -1,0 +1,24 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+{{#if wantStyling}}
+import './{{properCase name }}.scss';
+{{/if}}
+
+export default class {{ properCase name }} extends Component {
+
+  render() {
+    return (
+      {{#if wantStyling}}
+      <div className="{{dashCase name}}">
+      {{else}}
+      <div>
+      {{/if}}
+      </div>
+    );
+  }
+}
+
+
+{{ properCase name }}.propTypes = {
+
+};
