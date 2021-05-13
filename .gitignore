@@ -33,5 +33,10 @@ yarn.lock
 
 # vercel
 .vercel
+
+# important
 .idea
 .next
+.env
+.env.development
+.env.production
